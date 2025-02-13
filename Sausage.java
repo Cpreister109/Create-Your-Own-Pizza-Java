@@ -1,5 +1,5 @@
 public class Sausage extends MeatTopping {
-    public String toString() {
-        return "Sausage";
+    public String toNiceString() {
+        return "Sausage | Spiciness: " + getSpiciness();
     }
 }
