@@ -4,6 +4,11 @@ public class ThinCrust extends PizzaCrust {
     }
 
     @Override
+    public Double getPrice() {
+        return 2.50;
+    }
+
+    @Override
     public String toString() {
         return "Thin Crust(" + getIngredient() + ")";
     }

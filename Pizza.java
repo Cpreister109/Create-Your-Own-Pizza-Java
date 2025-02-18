@@ -1,4 +1,4 @@
-public class Pizza {
+public class Pizza implements MenuItem {
     private PizzaCrust crust;
     private PizzaSauce sauce;
     private PizzaTopping[] toppings;
@@ -13,6 +13,17 @@ public class Pizza {
         return crust;
     }
 
+    @Override
+    public Double getPrice() {
+        Double totalPrice = 0.0;
+        totalPrice += this.crust.getPrice() + this.sauce.getPrice();
+        for (int i = 0; i < toppings.length && toppings[i] != null; i++) {
+            totalPrice += this.toppings[i].getPrice();
+        }
+
+        return totalPrice;
+    }
+
     public void displayPizza() {
         System.out.println("Your Custom Pizza:\n" + crust.toString() + "\n" + sauce.toString());
         for (int i = 0; i < toppings.length && toppings[i] != null; i++) {
@@ -22,5 +33,7 @@ public class Pizza {
                 System.out.println(toppings[i].toString());
             }
         }
+
+        System.out.println("Total Cost of your Pizza: " + getPrice());
     }
 }

@@ -1,5 +1,7 @@
-public abstract class PizzaCrust {
+public abstract class PizzaCrust implements MenuItem {
     protected String ingredient;
+
+    public abstract String toString();
 
     public PizzaCrust(String ingredient) {
         this.ingredient = ingredient;
@@ -21,7 +23,10 @@ public abstract class PizzaCrust {
         }
     }
 
-    public abstract String toString();
+    @Override
+    public Double getPrice() {
+        return 2.90;
+    }
 
     public void setDeepDish(Boolean deepDish) {
 

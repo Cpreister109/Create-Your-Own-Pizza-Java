@@ -19,6 +19,11 @@ public class ThickCrust extends PizzaCrust {
         this.deepDish = deepDish;
     }
 
+    @Override
+    public Double getPrice() {
+        return 3.50;
+    }
+
     public String toString() {
         return "Thick Crust (" + ingredient + ")" + getDeepDish();
     }
