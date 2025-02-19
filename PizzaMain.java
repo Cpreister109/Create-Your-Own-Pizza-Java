@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class PizzaMain {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class PizzaMain {
         PizzaCrust crust;
         PizzaSauce sauce;
         PizzaTopping currTopping;
-        PizzaTopping[] toppings = new PizzaTopping[4];
+        ArrayList<PizzaTopping> toppings = new ArrayList<>();
         String sep = "-------------------------------------------\n";
         Scanner in = new Scanner(System.in);
 
@@ -121,7 +122,7 @@ public class PizzaMain {
                     break;
             }
 
-            toppings[i] = currTopping;
+            toppings.add(currTopping);
         }
 
         pizza = new Pizza(crust, sauce, toppings);

@@ -17,7 +17,7 @@ public abstract class PizzaCrust implements MenuItem {
 
     public String checkIntegrity(String ingredient) {
         if (ingredient == "Cauliflower") {
-            return "Handle carefully - cauliflower crusts might fall apart.";
+            return "Handle carefully - cauliflower crusts\nmight fall apart.";
         } else {
             return "";
         }
