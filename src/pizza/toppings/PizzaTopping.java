@@ -1,3 +1,7 @@
+package pizza.toppings;
+
+import pizza.MenuItem;
+
 public abstract class PizzaTopping implements MenuItem {
     Integer spiciness;
 

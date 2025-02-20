@@ -1,3 +1,5 @@
+package pizza.crust;
+
 public class ThickCrust extends PizzaCrust {
     private Boolean deepDish;
 

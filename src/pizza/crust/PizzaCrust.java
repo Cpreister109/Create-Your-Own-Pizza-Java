@@ -1,3 +1,7 @@
+package pizza.crust;
+
+import pizza.MenuItem;
+
 public abstract class PizzaCrust implements MenuItem {
     protected String ingredient;
 

@@ -1,4 +1,11 @@
+package pizza;
+
 import java.util.ArrayList;
+
+import pizza.crust.PizzaCrust;
+import pizza.sauce.PizzaSauce;
+import pizza.toppings.MeatTopping;
+import pizza.toppings.PizzaTopping;
 
 public class Pizza implements MenuItem {
     private PizzaCrust crust;

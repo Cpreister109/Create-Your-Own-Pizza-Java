@@ -1,3 +1,5 @@
+package pizza.toppings;
+
 public class MeatTopping extends PizzaTopping {
     private Integer spiciness;
 

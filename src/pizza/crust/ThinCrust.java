@@ -1,3 +1,5 @@
+package pizza.crust;
+
 public class ThinCrust extends PizzaCrust {
     public ThinCrust(String ingredient) {
         super(ingredient);

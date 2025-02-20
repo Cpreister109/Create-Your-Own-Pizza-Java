@@ -1,3 +1,5 @@
+package pizza.toppings;
+
 public class Pepperoni extends MeatTopping {
     @Override
     public Double getPrice() {

@@ -1,3 +1,5 @@
+package pizza.toppings;
+
 public class Celery extends VeggieTopping {
     @Override
     public Double getPrice() {

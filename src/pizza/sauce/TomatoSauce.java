@@ -1,3 +1,5 @@
+package pizza.sauce;
+
 public class TomatoSauce extends PizzaSauce {
     @Override
     public Double getPrice() {
