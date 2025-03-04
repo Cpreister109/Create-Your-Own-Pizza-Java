@@ -1,17 +1,18 @@
 package pizza;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import pizza.crust.PizzaCrust;
 import pizza.sauce.PizzaSauce;
 import pizza.toppings.MeatTopping;
 import pizza.toppings.PizzaTopping;
 
-public class Pizza implements MenuItem {
+public class Pizza extends AbstractMenuItem {
     private PizzaCrust crust;
     private PizzaSauce sauce;
     private ArrayList<PizzaTopping> toppings;
-    private ArrayList<MenuItem> selectionList;
+    private ArrayList<AbstractMenuItem> selectionList;
 
     public Pizza(PizzaCrust crust, PizzaSauce sauce, ArrayList<PizzaTopping> toppings) {
         this.crust = crust;
@@ -32,7 +33,7 @@ public class Pizza implements MenuItem {
         return sauce;
     }
 
-    public ArrayList<PizzaTopping> get() {
+    public ArrayList<PizzaTopping> getTopping() {
         return toppings;
     }
 
@@ -47,6 +48,9 @@ public class Pizza implements MenuItem {
     }
 
     public void displayPizza() {
+
+        sortItems();
+
         System.out.println("Your Custom Pizza: ");
         for (MenuItem item : selectionList) {
             if (item instanceof MeatTopping) {
@@ -57,5 +61,9 @@ public class Pizza implements MenuItem {
         }
 
         System.out.println("Total Cost of your Pizza: " + getPrice());
+    }
+
+    public void sortItems() {
+        Collections.sort(this.selectionList);
     }
 }

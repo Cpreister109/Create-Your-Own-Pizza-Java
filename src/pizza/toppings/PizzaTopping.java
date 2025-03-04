@@ -1,8 +1,8 @@
 package pizza.toppings;
 
-import pizza.MenuItem;
+import pizza.AbstractMenuItem;
 
-public abstract class PizzaTopping implements MenuItem {
+public abstract class PizzaTopping extends AbstractMenuItem {
     Integer spiciness;
 
     public abstract String toString();

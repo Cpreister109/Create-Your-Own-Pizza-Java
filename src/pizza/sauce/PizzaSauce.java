@@ -1,8 +1,8 @@
 package pizza.sauce;
 
-import pizza.MenuItem;
+import pizza.AbstractMenuItem;
 
-public abstract class PizzaSauce implements MenuItem {
+public abstract class PizzaSauce extends AbstractMenuItem {
     public abstract String toString();
 
     @Override
